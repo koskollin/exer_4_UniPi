@@ -1,9 +1,8 @@
 keimeno=open("two_cities_ascii.txt","r")
 data=keimeno.read()
-print(data)
+# print(data)
 list=data.split(" ")
 keimeno.close()
-#print(list)
 mikos=len(list)
 print("ΤΟ ΑΡΧΙΚΟ ΜΗΚΟΣ ΤΗΣ ΛΙΣΤΑΣ ΕΙΝΑΙ:",mikos)
 for i in range (mikos):
@@ -15,7 +14,7 @@ for i in range (mikos):
                                                           #ΕΙΔΙΚΟΥΣ ΧΑΡΑΚΤΗΡΕΣ
     list[i]=string
 print("ΠΛΕΟΝ ΣΤΗΝ ΛΙΣΤΑ ΕΧΟΥΝ ΜΕΙΝΕΙ ΜΟΝΟ ΟΙ ΑΠΑΡΑΙΤΗΤΟΙ (γράμματα και κενά) ΧΑΡΑΚΤΗΡΕΣ")
-print(list)
+#print(list)
 new_list=[] #ΔΗΜΙΟΥΡΓΙΑ ΜΙΑΣ ΝΕΑΣ ΚΕΝΗΣ ΛΙΣΤΑΣ ΠΟΥ ΘΑ ΠΕΡΙΕΧΕΙ ΤΙΣ ΚΑΤΑΛΛΗΛΕΣ ΛΕΞΕΙΣ
 for z in range(0,mikos-1,2):
     if len(list[z])!=len(list[z+1]): #ΕΝΤΑΞΗ ΖΕΥΓΟΥΣ ΛΕΞΕΩΝ ΟΠΟΥ ΤΟ ΑΘΡΟΙΣΜΑ!=20
@@ -23,7 +22,7 @@ for z in range(0,mikos-1,2):
         new_list.append(list[z+1])
 list=new_list
 print("Η ΝΕΑ ΛΙΣΤΑ ΜΕΤΑ ΤΗΝ ΑΦΑΙΡΕΣΗ ΤΩΝ ΖΕΥΓΑΡΙΩΝ ΛΕΞΕΩΝ:") #(Λ1+Λ2=20)
-print(list)
+#print(list)
 new_mikos=len(list)
 print("ΚΑΙ ΤΟ ΝΕΟ ΜΗΚΟΣ ΤΗΣ ΛΙΣΤΑΣ ΕΙΝΑΙ: ", new_mikos)
 max=0
